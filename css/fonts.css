@@ -1,0 +1,52 @@
+/* ubuntu-300 - latin */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./fonts/ubuntu-v14-latin-300.eot'); /* IE9 Compat Modes */
+  src: local('Ubuntu Light'), local('Ubuntu-Light'),
+       url('./fonts/ubuntu-v14-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/ubuntu-v14-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/ubuntu-v14-latin-300.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/ubuntu-v14-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/ubuntu-v14-latin-300.svg#Ubuntu') format('svg'); /* Legacy iOS */
+}
+/* ubuntu-regular - latin */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/ubuntu-v14-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Ubuntu Regular'), local('Ubuntu-Regular'),
+       url('./fonts/ubuntu-v14-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/ubuntu-v14-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/ubuntu-v14-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/ubuntu-v14-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/ubuntu-v14-latin-regular.svg#Ubuntu') format('svg'); /* Legacy iOS */
+}
+/* ubuntu-500 - latin */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./fonts/ubuntu-v14-latin-500.eot'); /* IE9 Compat Modes */
+  src: local('Ubuntu Medium'), local('Ubuntu-Medium'),
+       url('./fonts/ubuntu-v14-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/ubuntu-v14-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/ubuntu-v14-latin-500.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/ubuntu-v14-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/ubuntu-v14-latin-500.svg#Ubuntu') format('svg'); /* Legacy iOS */
+}
+/* ubuntu-700 - latin */
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/ubuntu-v14-latin-700.eot'); /* IE9 Compat Modes */
+  src: local('Ubuntu Bold'), local('Ubuntu-Bold'),
+       url('./fonts/ubuntu-v14-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/ubuntu-v14-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/ubuntu-v14-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/ubuntu-v14-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/ubuntu-v14-latin-700.svg#Ubuntu') format('svg'); /* Legacy iOS */
+}
