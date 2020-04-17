@@ -73,7 +73,6 @@ main {
   -ms-transform: translateY(1px)  ;
   -o-transform: translateY(1px)  ;
   color: #244618;
-  font-weight: bold;
 }
 
 [data-fn="true"] {
