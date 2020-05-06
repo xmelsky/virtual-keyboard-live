@@ -1,26 +1,35 @@
 {
-  "name": "VK-live",
+  "name": "rss-keyboard",
   "version": "1.0.0",
-  "description": "",
+  "description": "Virtual keyboard for use in RSS tasks",
   "main": "index.js",
   "scripts": {
+    "build": "babel src/js --presets @babel/preset-env --out-dir ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xmelsky/virtual-keyboard-live.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "virtual keyboard",
+    "rs school"
+  ],
+  "author": "Dima Hmel",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/xmelsky/virtual-keyboard-live/issues"
   },
   "homepage": "https://github.com/xmelsky/virtual-keyboard-live#readme",
   "devDependencies": {
-    "babel-eslint": "^10.1.0",
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.9.6",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2"
+  },
+  "dependencies": {
+    "material-icons": "^0.3.1"
   }
 }

@@ -1,3 +1,63 @@
+@font-face {
+  font-family: 'fontello';
+  src: url('fonts/fontello.eot?22685962');
+  src: url('fonts/fontello.eot?22685962#iefix') format('embedded-opentype'),
+       url('fonts/fontello.woff2?22685962') format('woff2'),
+       url('fonts/fontello.woff?22685962') format('woff'),
+       url('fonts/fontello.ttf?22685962') format('truetype'),
+       url('fonts/fontello.svg?22685962#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?22685962#fontello') format('svg');
+  }
+}
+*/
+
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-globe:before { content: '\e801'; } /* '' */
+
+
 * {
   margin: 0;
   padding: 0;
@@ -19,8 +79,8 @@ main {
 
 .keyboard {
   display: grid;
-  grid-row-gap: 10px;
-  padding: 10px;
+  grid-row-gap: 1px;
+  padding: 5px;
   border: 1px solid;
   position: relative;
   overflow: hidden;
@@ -31,16 +91,18 @@ main {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border: 3px solid #222;
+  max-width: 500px;
 }
 
 .keyboard__row {
   display: grid;
-  grid-gap: 10px;
-  grid-row-gap: 10px;
-  height: 50px;
+  grid-gap: 1px;
+  grid-row-gap: 1px;
+  height: 30px;
 }
 
 .keyboard__key {
+  max-width: 35px;
   display: flex;
   cursor: pointer;
   border-radius: 3px;
@@ -81,55 +143,73 @@ main {
 }
 
 [data-fn="true"] > .letter {
-  font-size: 16px;
+  font-size: 10px;
 }
 
 [data-code="CapsLock"] {
-  width: 86px;
+  width: auto;
+  min-width: 55px;
+
 }
 
 [data-code="ShiftLeft"] {
-  width: 100px;
+  width: auto;
+  min-width: 50px;
 }
 
 [data-code="ShiftRight"] {
-  width: 120px;
+  width: auto;
+  min-width: 70px;
 }
 
 [data-code="Enter"] {
-  width: 100px;
+  width: auto;
+  min-width: 65px;
 }
 
 [data-code="Tab"] {
-  width: 76px;
+  width: auto;
+  min-width: 45px;
 }
 
 [data-code="ControlLeft"] {
-  width: 76px;
+  width: auto;
 }
 
 [data-code="ControlRight"] {
-  width: 60px;
+  width: auto;
+}
+
+[data-code="Win"] {
+  background: rgb(125, 253, 75);
+  min-width: 60px;
 }
 
 [data-code="Backspace"] {
-  width: 115px;
+  width: auto;
+  min-width: 57px;
 }
 
 [data-code="Space"] {
-  width: 420px;
+  width: auto;
+  min-width: 200px;
+}
+
+[data-code="Delete"] {
+  width: auto;
+  min-width: 40px;
 }
 
 [data-code="AltLeft"],
 [data-code="AltRight"] {
-  width: 76px;
+  width: 100%;
 }
 
 [data-code="ArrowLeft"],
 [data-code="ArrowUp"],
 [data-code="ArrowDown"],
 [data-code="ArrowRight"] {
-  background: rgb(125, 253, 75);
+  background: #61d035;
 }
 
 
@@ -138,7 +218,7 @@ main {
 }
 
 .letter {
-  font-size: 25px;
+  font-size: 16px;
   width: 100%;
   text-align: center;
   transition: all .2s ease;
@@ -158,19 +238,8 @@ main {
   color: #666;
 }
 
-textarea.output {
-  resize: none;
-  width: 100%;
-  height: 200px;
-  padding: 10px;
-  box-sizing: border-box;
-  font-size: 18px;
-  letter-spacing: 1px;
-  margin-top: 50px;
-  margin-bottom: 10px;
-}
-
 .sub {
+  font-size: 8px;
   width: 100%;
   color: #68688a;
   text-align: left;
@@ -184,21 +253,21 @@ textarea.output {
 
 .sub.sub-active:not(:empty) {
   color: rgb(19, 80, 0);
-  font-size: 23px;
+  font-size: 14px;
 }
 
 .sub.sub-active:not(:empty) ~ .letter.sub-inactive {
   color: #68688a;
-  font-size: 16px;
+  font-size: 12px;
   text-align: center;
-  padding-right: 10px;
-  width: 50%;
+  padding-right: 5px;
+  width: 40%;
   transform-origin: center;
-  transform: translateX(20px);
-  -webkit-transform: translateX(20px);
-  -moz-transform: translateX(20px);
-  -ms-transform: translateX(20px);
-  -o-transform: translateX(20px);
+  transform: translateX(10px);
+  -webkit-transform: translateX(10px);
+  -moz-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  -o-transform: translateX(10px);
 }
 
 @keyframes fadeInOut {
