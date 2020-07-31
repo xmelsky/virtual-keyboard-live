@@ -1,8 +1,6 @@
 # virtual-keyboard-live
 
-My live coding project
-
-Links to my youtube stream videos:
+Live coding project repo for followed videos on YT:
 
 part 1 https://www.youtube.com/watch?v=nuQW_cBLR6Q&t=53s 
 
